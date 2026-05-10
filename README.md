@@ -26,6 +26,13 @@ Verify integrity against `checksums.txt`:
 sha256sum -c checksums.txt --ignore-missing
 ```
 
+> **About the "Source code" downloads.** GitHub adds "Source code (zip)"
+> and "Source code (tar.gz)" links to every release page automatically
+> — there's no way to hide them. They contain *only this README*; the
+> actual alloy-node source lives in the private
+> [alloy-router](https://github.com/kbarto323/alloy-router) repo and is
+> not distributed here. Use the binary archives in the asset list above.
+
 ## Quick start
 
 ```
