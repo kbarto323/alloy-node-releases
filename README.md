@@ -1,53 +1,27 @@
-# alloy-node Releases
+# Alloy Releases
 
-Public download host for **alloy-node**, the unified Go agent for
-[alloy-router](https://github.com/kbarto323/alloy-router) (private source).
-The agent runs on hosts that own AI backends and/or IP cameras and reports
-state to a central core.
+Public download host for Alloy's binary artifacts — **Alloy Desktop**
+(Community Edition), **alloy-node**, and **alloy-notify** — all built from
+the private alloy-router source repository.
+
+> **About the "Source code (zip / tar.gz)" links on release pages:** GitHub
+> attaches auto-generated source archives to every release. They snapshot
+> *this* download-hosting repository, which intentionally contains no source
+> code — just this README. Ignore them; the artifacts you want are the
+> named `.tar.gz` / `.zip` assets above them.
 
 ## Download
 
-Grab the archive for your platform from the [Releases page](https://github.com/kbarto323/alloy-node-releases/releases/latest):
+Grab artifacts from the
+[latest release](https://github.com/Bumbershoot-Unlimited/alloy-node-releases/releases/latest):
 
-| OS | Architecture | Archive |
+| Artifact | What it is | Platforms |
 |---|---|---|
-| macOS | Apple Silicon | `alloy-node_vX.Y.Z_Darwin_arm64.tar.gz` |
-| macOS | Intel | `alloy-node_vX.Y.Z_Darwin_x86_64.tar.gz` |
-| Linux | x86_64 | `alloy-node_vX.Y.Z_Linux_x86_64.tar.gz` |
-| Linux | arm64 | `alloy-node_vX.Y.Z_Linux_arm64.tar.gz` |
-| Windows | x86_64 | `alloy-node_vX.Y.Z_Windows_x86_64.zip` |
+| `alloy-desktop_*` | Free single-machine AI gateway (Community Edition) | macOS Apple silicon, Linux x86_64 |
+| `alloy-node_*` | Go agent for hosts that own AI backends / cameras | macOS, Linux, Windows |
+| `alloy-notify_*` | Desktop notifications for key holders | macOS, Linux, Windows |
 
-Each archive contains the `alloy-node` binary, a `node.yaml.example`
-config template, and the project README.
+No license yet? Community licenses are free:
+https://license.bumbershootunltd.com/community
 
-Verify integrity against `checksums.txt`:
-
-```
-sha256sum -c checksums.txt --ignore-missing
-```
-
-> **About the "Source code" downloads.** GitHub adds "Source code (zip)"
-> and "Source code (tar.gz)" links to every release page automatically
-> — there's no way to hide them. They contain *only this README*; the
-> actual alloy-node source lives in the private
-> [alloy-router](https://github.com/kbarto323/alloy-router) repo and is
-> not distributed here. Use the binary archives in the asset list above.
-
-## Quick start
-
-```
-tar -xzf alloy-node_*_Darwin_arm64.tar.gz
-cp node.yaml.example node.yaml   # edit core_url + api_key
-./alloy-node
-```
-
-**macOS Gatekeeper**: first run will be blocked. Bypass with:
-
-```
-xattr -dr com.apple.quarantine alloy-node
-```
-
-## What's in this repo
-
-This repo holds release tags + binaries only. There is no source code
-here. Issue tracking and source live in the private repo.
+Each release's notes carry per-artifact install and upgrade instructions.
